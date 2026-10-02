@@ -1,0 +1,18 @@
+{
+  "name": "HyS Tótem Operativo - Seguridad e Higiene",
+  "short_name": "HyS Tótem",
+  "description": "Asistente de Campo para Técnicos en Seguridad e Higiene Laboral. Resoluciones SRT, Checklists y Permisos PTS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
