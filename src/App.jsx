@@ -3,15 +3,17 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import TurneroCard from './components/TurneroCard';
 import DetalleTarea from './components/DetalleTarea';
+import HistorialModal from './components/HistorialModal';
 import { TAREAS_CRITICAS } from './data/tareas';
 
 export default function App() {
   const [tareaSeleccionada, setTareaSeleccionada] = useState(null);
+  const [historialAbierto, setHistorialAbierto] = useState(false);
 
   return (
     <div className="min-h-screen bg-slate-100 text-slate-800 flex flex-col font-sans">
-      {/* 1. Encabezado estilo Turnero / Tótem de Obra */}
-      <Header />
+      {/* 1. Encabezado estilo Turnero con botón de Historial */}
+      <Header onOpenHistorial={() => setHistorialAbierto(true)} />
 
       {/* 2. Contenido principal */}
       <main className="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
@@ -50,7 +52,13 @@ export default function App() {
         )}
       </main>
 
-      {/* 3. Pie de página */}
+      {/* 3. Modal de Historial de Permisos (Persistencia Offline) */}
+      <HistorialModal
+        isOpen={historialAbierto}
+        onClose={() => setHistorialAbierto(false)}
+      />
+
+      {/* 4. Pie de página */}
       <footer className="bg-white border-t border-slate-200 py-3.5 px-6 text-center text-xs text-slate-500 mt-auto">
         Sistema Ágil de Seguridad e Higiene Laboral &middot; Desarrollado en React 19 + Tailwind CSS &middot; Modo Tótem Táctil
       </footer>

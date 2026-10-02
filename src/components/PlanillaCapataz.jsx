@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FileCheck, Download, AlertCircle, CheckCircle } from 'lucide-react';
 import SignaturePad from './SignaturePad';
 import { generarPermisoPDF } from '../utils/generatePdf';
+import { guardarPermisoEnHistorial } from '../utils/storage';
 
 export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndices }) {
   const [formData, setFormData] = useState({
@@ -47,6 +48,17 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
         checklistItems: checkedIndices,
         signatureDataUrl
       });
+      
+      // Guardar en el historial local persistente
+      guardarPermisoEnHistorial({
+        id: codigo,
+        tarea,
+        datosObra: { ...formData },
+        checkedIndices: [...checkedIndices],
+        signatureDataUrl,
+        fecha: new Date().toLocaleString('es-AR')
+      });
+
       setCodigoEmitido(codigo);
     } catch (err) {
       console.error(err);
