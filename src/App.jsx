@@ -4,11 +4,22 @@ import Header from './components/Header';
 import TurneroCard from './components/TurneroCard';
 import DetalleTarea from './components/DetalleTarea';
 import HistorialModal from './components/HistorialModal';
+import Buscador from './components/Buscador';
 import { TAREAS_CRITICAS } from './data/tareas';
+import { buscarEnTareas } from './utils/busqueda';
 
 export default function App() {
   const [tareaSeleccionada, setTareaSeleccionada] = useState(null);
   const [historialAbierto, setHistorialAbierto] = useState(false);
+  const [busqueda, setBusqueda] = useState('');
+
+  const resultados = buscarEnTareas(busqueda);
+  const hayBusqueda = busqueda.trim().length > 0;
+
+  const abrirTarea = (tarea) => {
+    setTareaSeleccionada(tarea);
+    setBusqueda('');
+  };
 
   return (
     <div className="min-h-screen bg-slate-100 text-slate-800 flex flex-col font-sans">
@@ -19,29 +30,41 @@ export default function App() {
       <main className="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
         {!tareaSeleccionada ? (
           <div className="space-y-6">
-            {/* Banner de bienvenida interactivo */}
-            <div className="bg-white p-5 md:p-6 rounded-2xl shadow-xs border border-slate-200 text-center">
-              <span className="inline-block px-3 py-1 bg-amber-100 text-amber-900 text-xs font-black rounded-full mb-2 uppercase tracking-wider">
-                Paso 1: Seleccione la Tarea de Riesgo
-              </span>
-              <h2 className="text-2xl md:text-3xl font-black text-slate-900">
-                ¿Qué trabajo se va a realizar en obra?
-              </h2>
-              <p className="text-xs md:text-sm text-slate-600 max-w-xl mx-auto mt-1.5 leading-relaxed">
-                Toque una tarjeta táctil para acceder a las <strong>resoluciones oficiales (SRT)</strong>, el protocolo de actuación y las <strong>planillas de control</strong> para operarios y capataces.
-              </p>
-            </div>
+            {/* Buscador global (siempre visible en el menú principal) */}
+            <Buscador
+              busqueda={busqueda}
+              onChange={setBusqueda}
+              resultados={resultados}
+              onSelect={abrirTarea}
+            />
 
-            {/* Grilla de Botones Gigantes Estilo Turnero */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {TAREAS_CRITICAS.map((tarea) => (
-                <TurneroCard
-                  key={tarea.id}
-                  tarea={tarea}
-                  onSelect={setTareaSeleccionada}
-                />
-              ))}
-            </div>
+            {/* Sin búsqueda activa: banner de bienvenida + grilla completa */}
+            {!hayBusqueda && (
+              <>
+                <div className="bg-white p-5 md:p-6 rounded-2xl shadow-xs border border-slate-200 text-center">
+                  <span className="inline-block px-3 py-1 bg-amber-100 text-amber-900 text-xs font-black rounded-full mb-2 uppercase tracking-wider">
+                    Paso 1: Seleccione la Tarea de Riesgo
+                  </span>
+                  <h2 className="text-2xl md:text-3xl font-black text-slate-900">
+                    ¿Qué trabajo se va a realizar en obra?
+                  </h2>
+                  <p className="text-xs md:text-sm text-slate-600 max-w-xl mx-auto mt-1.5 leading-relaxed">
+                    Toque una tarjeta táctil para acceder a las <strong>resoluciones oficiales (SRT)</strong>, la guía técnica y las <strong>planillas de control</strong> para operarios y capataces.
+                  </p>
+                </div>
+
+                {/* Grilla de Botones Gigantes Estilo Turnero */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                  {TAREAS_CRITICAS.map((tarea) => (
+                    <TurneroCard
+                      key={tarea.id}
+                      tarea={tarea}
+                      onSelect={abrirTarea}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         ) : (
           /* Vista Detallada de la Tarea */
