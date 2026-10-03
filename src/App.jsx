@@ -10,6 +10,7 @@ import CheckHerramientas from './components/CheckHerramientas';
 import ATSForm from './components/ATSForm';
 import APRForm from './components/APRForm';
 import Capacitaciones from './components/Capacitaciones';
+import Asistente from './components/Asistente';
 import { TAREAS_CRITICAS } from './data/tareas';
 import { MODELOS } from './data/modelos';
 import { buscarEnTareas } from './utils/busqueda';
@@ -35,6 +36,13 @@ export default function App() {
     setModeloSeleccionado(id);
     setTareaSeleccionada(null);
     setBusqueda('');
+  };
+
+  const manejarBuscarAsistente = (texto) => {
+    setTareaSeleccionada(null);
+    setModeloSeleccionado(null);
+    setBusqueda(texto);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const renderModelo = () => {
@@ -148,6 +156,13 @@ export default function App() {
       <footer className="bg-white border-t border-slate-200 py-3.5 px-6 text-center text-xs text-slate-500 mt-auto">
         Sistema Ágil de Seguridad e Higiene Laboral &middot; Desarrollado en React 19 + Tailwind CSS &middot; Modo Tótem Táctil
       </footer>
+
+      {/* 5. Asistente virtual de guiado (offline, sin API key) */}
+      <Asistente
+        onAbrirTarea={abrirTarea}
+        onAbrirModelo={abrirModelo}
+        onBuscar={manejarBuscarAsistente}
+      />
     </div>
   );
 }
