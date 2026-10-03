@@ -5,12 +5,6 @@ import {
   Scale,
   ListOrdered,
   OctagonAlert,
-  Mountain,
-  Construction,
-  Zap,
-  Box,
-  Flame,
-  Anchor,
   ChevronDown,
   BookOpen,
   ClipboardList,
@@ -20,15 +14,7 @@ import {
 } from 'lucide-react';
 import ChecklistOperarios from './ChecklistOperarios';
 import PlanillaCapataz from './PlanillaCapataz';
-
-const iconMap = {
-  Mountain: Mountain,
-  Tractor: Construction,
-  Zap: Zap,
-  Box: Box,
-  Flame: Flame,
-  Anchor: Anchor
-};
+import IlustracionTarea from './IlustracionTarea';
 
 // Categorías de la guía técnica operativa (contenido expandido por tarea)
 const SECCIONES_OPERATIVA = [
@@ -41,7 +27,6 @@ const SECCIONES_OPERATIVA = [
 export default function DetalleTarea({ tarea, onBack }) {
   const [checkedIndices, setCheckedIndices] = useState([]);
   const [resolucionAbierta, setResolucionAbierta] = useState(0);
-  const IconComponent = iconMap[tarea.icono] || Construction;
 
   const handleToggle = (index) => {
     setCheckedIndices(prev =>
@@ -74,8 +59,8 @@ export default function DetalleTarea({ tarea, onBack }) {
         {/* Cabecera de la tarea */}
         <div className="bg-amber-500 text-slate-950 p-4 md:p-5 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-slate-950 rounded-xl text-amber-400">
-              <IconComponent className="w-7 h-7 md:w-8 md:h-8" />
+            <div className="bg-slate-950 rounded-xl p-1.5 shrink-0">
+              <IlustracionTarea id={tarea.id} className="w-14 h-14 md:w-16 md:h-16 text-amber-400" />
             </div>
             <div>
               <div className="text-[11px] uppercase font-black tracking-widest text-slate-900/80">

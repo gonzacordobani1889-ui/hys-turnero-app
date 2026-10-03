@@ -12,8 +12,9 @@ export const TAREAS_CRITICAS = [
     titulo: "Trabajo en Altura",
     subtitulo: "Tareas a más de 2.00 metros sobre el nivel del suelo",
     icono: "Mountain",
-    colorBg: "bg-blue-600 hover:bg-blue-700",
-    colorBadge: "bg-blue-100 text-blue-800",
+    colorBg: "bg-red-600 hover:bg-red-700",
+    colorBadge: "bg-red-100 text-red-700",
+    tema: "oscuro",
     resoluciones: [
       {
         norma: "Dec. 911/96 (Arts. 53-61)",
@@ -85,8 +86,9 @@ export const TAREAS_CRITICAS = [
     titulo: "Excavación y Zanjas",
     subtitulo: "Apertura de zanjas, pozos, bases y movimientos de suelo",
     icono: "Tractor",
-    colorBg: "bg-amber-600 hover:bg-amber-700",
+    colorBg: "bg-amber-400 hover:bg-amber-500",
     colorBadge: "bg-amber-100 text-amber-800",
+    tema: "claro",
     resoluciones: [
       {
         norma: "Res. SRT 503/14",
@@ -152,8 +154,9 @@ export const TAREAS_CRITICAS = [
     titulo: "Riesgo Eléctrico / LOTO",
     subtitulo: "Intervención en tableros, cableados de obra y bloqueo de energía",
     icono: "Zap",
-    colorBg: "bg-yellow-600 hover:bg-yellow-700",
-    colorBadge: "bg-yellow-100 text-yellow-800",
+    colorBg: "bg-orange-500 hover:bg-orange-600",
+    colorBadge: "bg-orange-100 text-orange-800",
+    tema: "claro",
     resoluciones: [
       {
         norma: "Dec. 911/96 (Arts. 79-90)",
@@ -217,8 +220,9 @@ export const TAREAS_CRITICAS = [
     titulo: "Espacios Confinados",
     subtitulo: "Cisternas, tanques, túneles, pozos o recintos con poca ventilación",
     icono: "Box",
-    colorBg: "bg-purple-700 hover:bg-purple-800",
-    colorBadge: "bg-purple-100 text-purple-800",
+    colorBg: "bg-red-600 hover:bg-red-700",
+    colorBadge: "bg-red-100 text-red-700",
+    tema: "oscuro",
     resoluciones: [
       {
         norma: "Norma IRAM 3954",
@@ -283,8 +287,9 @@ export const TAREAS_CRITICAS = [
     titulo: "Trabajo en Caliente",
     subtitulo: "Soldadura, corte con amoladora, oxicorte y fuentes de ignición",
     icono: "Flame",
-    colorBg: "bg-red-600 hover:bg-red-700",
-    colorBadge: "bg-red-100 text-red-800",
+    colorBg: "bg-orange-500 hover:bg-orange-600",
+    colorBadge: "bg-orange-100 text-orange-800",
+    tema: "claro",
     resoluciones: [
       {
         norma: "Dec. 911/96 (Arts. 131-137)",
@@ -349,8 +354,9 @@ export const TAREAS_CRITICAS = [
     titulo: "Izaje de Cargas / Grúas",
     subtitulo: "Operación de hidrogrúas, plumas, eslingas, ganchos y montacargas",
     icono: "Anchor",
-    colorBg: "bg-teal-700 hover:bg-teal-800",
-    colorBadge: "bg-teal-100 text-teal-800",
+    colorBg: "bg-amber-400 hover:bg-amber-500",
+    colorBadge: "bg-amber-100 text-amber-800",
+    tema: "claro",
     resoluciones: [
       {
         norma: "Dec. 911/96 (Arts. 106-130)",
