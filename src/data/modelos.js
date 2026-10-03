@@ -26,5 +26,13 @@ export const MODELOS = [
     icono: 'Wrench',
     colorBg: 'bg-slate-700 hover:bg-slate-800',
     colorBadge: 'bg-slate-100 text-slate-800'
+  },
+  {
+    id: 'capacitacion',
+    titulo: 'Modelos de Capacitación',
+    subtitulo: 'Constancias con temario y planilla de asistencia',
+    icono: 'GraduationCap',
+    colorBg: 'bg-emerald-700 hover:bg-emerald-800',
+    colorBadge: 'bg-emerald-100 text-emerald-800'
   }
 ];
