@@ -1,16 +1,22 @@
 // src/App.jsx
 import React, { useState } from 'react';
+import { Wrench, FolderOpen } from 'lucide-react';
 import Header from './components/Header';
 import TurneroCard from './components/TurneroCard';
 import DetalleTarea from './components/DetalleTarea';
 import HistorialModal from './components/HistorialModal';
 import Buscador from './components/Buscador';
+import CheckHerramientas from './components/CheckHerramientas';
 import { TAREAS_CRITICAS } from './data/tareas';
+import { MODELOS } from './data/modelos';
 import { buscarEnTareas } from './utils/busqueda';
+
+const MODELO_ICONOS = { Wrench };
 
 export default function App() {
   const [tareaSeleccionada, setTareaSeleccionada] = useState(null);
   const [historialAbierto, setHistorialAbierto] = useState(false);
+  const [modeloSeleccionado, setModeloSeleccionado] = useState(null);
   const [busqueda, setBusqueda] = useState('');
 
   const resultados = buscarEnTareas(busqueda);
@@ -18,7 +24,23 @@ export default function App() {
 
   const abrirTarea = (tarea) => {
     setTareaSeleccionada(tarea);
+    setModeloSeleccionado(null);
     setBusqueda('');
+  };
+
+  const abrirModelo = (id) => {
+    setModeloSeleccionado(id);
+    setTareaSeleccionada(null);
+    setBusqueda('');
+  };
+
+  const renderModelo = () => {
+    switch (modeloSeleccionado) {
+      case 'check-herramientas':
+        return <CheckHerramientas onBack={() => setModeloSeleccionado(null)} />;
+      default:
+        return null;
+    }
   };
 
   return (
@@ -28,9 +50,11 @@ export default function App() {
 
       {/* 2. Contenido principal */}
       <main className="flex-1 max-w-6xl w-full mx-auto p-4 md:p-6">
-        {!tareaSeleccionada ? (
+        {modeloSeleccionado ? (
+          renderModelo()
+        ) : !tareaSeleccionada ? (
           <div className="space-y-6">
-            {/* Buscador global (siempre visible en el menú principal) */}
+            {/* Buscador global */}
             <Buscador
               busqueda={busqueda}
               onChange={setBusqueda}
@@ -38,7 +62,7 @@ export default function App() {
               onSelect={abrirTarea}
             />
 
-            {/* Sin búsqueda activa: banner de bienvenida + grilla completa */}
+            {/* Sin búsqueda activa: bienvenida + tareas + modelos */}
             {!hayBusqueda && (
               <>
                 <div className="bg-white p-5 md:p-6 rounded-2xl shadow-xs border border-slate-200 text-center">
@@ -53,7 +77,7 @@ export default function App() {
                   </p>
                 </div>
 
-                {/* Grilla de Botones Gigantes Estilo Turnero */}
+                {/* Grilla de tareas de riesgo crítico */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                   {TAREAS_CRITICAS.map((tarea) => (
                     <TurneroCard
@@ -63,6 +87,36 @@ export default function App() {
                     />
                   ))}
                 </div>
+
+                {/* Documentos y modelos de gestión */}
+                <section>
+                  <div className="flex items-center gap-2 mb-3">
+                    <FolderOpen className="w-5 h-5 text-slate-500" />
+                    <h2 className="text-sm md:text-base font-black text-slate-700 uppercase tracking-wide">
+                      Documentos y Modelos de Gestión
+                    </h2>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {MODELOS.map((modelo) => {
+                      const Icono = MODELO_ICONOS[modelo.icono] || Wrench;
+                      return (
+                        <button
+                          key={modelo.id}
+                          onClick={() => abrirModelo(modelo.id)}
+                          className={`${modelo.colorBg} text-white text-left p-5 rounded-2xl shadow-sm hover:shadow-md transition-all active:scale-[0.98] flex items-center gap-4 border-2 border-white/20 cursor-pointer group`}
+                        >
+                          <div className="p-3 bg-black/25 rounded-xl group-hover:scale-105 transition-transform shrink-0">
+                            <Icono className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h3 className="text-base md:text-lg font-black leading-tight">{modelo.titulo}</h3>
+                            <p className="text-xs text-white/85 mt-0.5 leading-relaxed">{modelo.subtitulo}</p>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </section>
               </>
             )}
           </div>
