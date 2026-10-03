@@ -1,17 +1,19 @@
 // src/App.jsx
 import React, { useState } from 'react';
-import { Wrench, FolderOpen } from 'lucide-react';
+import { Wrench, FolderOpen, ClipboardList, Gauge } from 'lucide-react';
 import Header from './components/Header';
 import TurneroCard from './components/TurneroCard';
 import DetalleTarea from './components/DetalleTarea';
 import HistorialModal from './components/HistorialModal';
 import Buscador from './components/Buscador';
 import CheckHerramientas from './components/CheckHerramientas';
+import ATSForm from './components/ATSForm';
+import APRForm from './components/APRForm';
 import { TAREAS_CRITICAS } from './data/tareas';
 import { MODELOS } from './data/modelos';
 import { buscarEnTareas } from './utils/busqueda';
 
-const MODELO_ICONOS = { Wrench };
+const MODELO_ICONOS = { Wrench, ClipboardList, Gauge };
 
 export default function App() {
   const [tareaSeleccionada, setTareaSeleccionada] = useState(null);
@@ -36,6 +38,10 @@ export default function App() {
 
   const renderModelo = () => {
     switch (modeloSeleccionado) {
+      case 'ats':
+        return <ATSForm onBack={() => setModeloSeleccionado(null)} />;
+      case 'apr':
+        return <APRForm onBack={() => setModeloSeleccionado(null)} />;
       case 'check-herramientas':
         return <CheckHerramientas onBack={() => setModeloSeleccionado(null)} />;
       default:
