@@ -5,7 +5,7 @@
 import React from 'react';
 
 const ILUSTRACIONES = {
-  // Trabajo en Altura: casco con barbiquejo + línea de vida y mosquetón
+  // Trabajo en Altura: casco con mentonera + línea de vida y mosquetón
   altura: (
     <g>
       <path d="M38 48 a22 22 0 0 1 44 0 l5 11 H33 Z" fill="currentColor" />

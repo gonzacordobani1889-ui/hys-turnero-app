@@ -42,7 +42,7 @@ export const TAREAS_CRITICAS = [
         "Verificar el estado del andamio o plataforma antes del ascenso: nivelación, amarres, barandas y zócalos.",
         "Seleccionar y comprobar un punto de anclaje resistente (mínimo 22 kN) o una línea de vida certificada.",
         "Colocar y ajustar el arnés de cuerpo completo con cabo doble en 'Y' y absorbedor de energía.",
-        "Delimitar y señalizar la zona inferior para evitar el impacto de objetos caídos.",
+        "Delimitar y señalizar la zona inferior con malla naranja, vallas o cinta de peligro para evitar el impacto de objetos caídos.",
         "Suscribir el Permiso de Trabajo Seguro (PTS) antes de iniciar la tarea."
       ],
       metodosTrabajo: [
@@ -67,17 +67,17 @@ export const TAREAS_CRITICAS = [
     pasos: [
       { num: 1, titulo: "Inspección Previa", desc: "Verificar andamios nivelados, tablones amarrados y que la velocidad del viento no supere los 40 km/h." },
       { num: 2, titulo: "Punto de Anclaje", desc: "Fijar cabo a línea de vida independiente certificada o estructura resistente comprobada." },
-      { num: 3, titulo: "Revisión EPP", desc: "Inspeccionar las costuras del arnés, los mosquetones con doble traba y el casco con barbiquejo ajustado." },
+      { num: 3, titulo: "Revisión EPP", desc: "Inspeccionar las costuras del arnés, los mosquetones con doble traba y el casco con mentonera ajustada." },
       { num: 4, titulo: "Permiso Firmado", desc: "El Capataz o Maestro Mayor de Obra debe suscribir el PTS antes del ascenso." }
     ],
     checklist: [
       "Arnés de seguridad de cuerpo completo certificado (IRAM 3622)",
       "Cabo de vida doble en 'Y' con amortiguador de impacto",
-      "Casco de seguridad con barbiquejo de tres puntos ajustado a la barbilla",
+      "Casco de seguridad con mentonera de tres puntos ajustada a la barbilla",
       "Línea de vida independiente fijada a estructura resistente (> 22 kN)",
       "Andamio con barandas reglamentarias (1m y 0.50m) y zócalos de 15 cm",
       "Tablones metálicos o de madera sana trabados y amarrados",
-      "Zona inferior delimitada y señalizada con cinta o vallas de peligro",
+      "Zona inferior delimitada y señalizada con malla naranja, vallas o cinta de peligro",
       "Calzado de seguridad dieléctrico con suela antideslizante limpia"
     ]
   },
@@ -111,7 +111,7 @@ export const TAREAS_CRITICAS = [
         "Solicitar y verificar el relevamiento de interferencias subterráneas (gas, electricidad, agua, cloacas).",
         "Definir talud natural o entibamiento según la profundidad y el tipo de suelo.",
         "Acopiar el material extraído a más de 0,60 m del borde superior.",
-        "Colocar escaleras de acceso cada 7,5 m de recorrido y vallas perimetrales rígidas.",
+        "Colocar escaleras de acceso cada 7,5 m de recorrido y vallado perimetral con malla de señalización naranja.",
         "Inspeccionar los taludes tras lluvias o vibraciones de maquinaria."
       ],
       metodosTrabajo: [
@@ -128,7 +128,7 @@ export const TAREAS_CRITICAS = [
       ],
       prevencion: [
         "Prohibir el ingreso a zanjas sin entibado o talud cuando la profundidad supera 1,20 m.",
-        "Vallas rígidas y señalización para evitar caídas de personas y de vehículos.",
+        "Vallado rígido y malla de señalización naranja para evitar caídas de personas y de vehículos.",
         "Uso obligatorio de casco, botas de seguridad y chaleco de alta visibilidad.",
         "Detener la tarea ante grietas, filtraciones o vibraciones que comprometan la estabilidad."
       ]
@@ -144,7 +144,7 @@ export const TAREAS_CRITICAS = [
       "Entibamiento o apuntalamiento colocado para zanjas con profundidad > 1.20m",
       "Material de desmonte acopiado a distancia segura (> 0.60m del borde)",
       "Escaleras de ingreso y egreso rápido ubicadas a no más de 7.5m",
-      "Vallas físicas rígidas en el perímetro para evitar caídas de terceros",
+      "Vallado rígido y malla de señalización naranja en el perímetro para evitar caídas de terceros",
       "Inspección de grietas o taludes tras lluvias o vibraciones de maquinaria",
       "Uso obligatorio de casco, botas de seguridad y chaleco de alta visibilidad"
     ]
@@ -184,7 +184,7 @@ export const TAREAS_CRITICAS = [
       metodosTrabajo: [
         "Trabajos sin tensión (método preferente) mediante consignación y bloqueo LOTO.",
         "Trabajos con tensión únicamente con autorización, procedimiento y EPP dieléctrico.",
-        "Delimitación de la zona de trabajo y señalización de riesgo eléctrico.",
+        "Delimitación de la zona de trabajo con vallas o cinta de peligro y señalización de riesgo eléctrico.",
         "Medición previa con multímetro o tester, verificando antes su correcto funcionamiento."
       ],
       tiposInforme: [
@@ -379,7 +379,7 @@ export const TAREAS_CRITICAS = [
         "Verificar la habilitación del operador y la revisión técnica vigente del equipo.",
         "Inspeccionar eslingas, grilletes, ganchos y pestillos de seguridad.",
         "Extender al 100 % los estabilizadores sobre suelo firme y consolidado.",
-        "Delimitar la zona de maniobra y prohibir la permanencia bajo carga suspendida.",
+        "Delimitar la zona de maniobra con vallas o cinta de peligro y prohibir la permanencia bajo carga suspendida.",
         "Designar un único señalero para la comunicación con el operador."
       ],
       metodosTrabajo: [
@@ -404,14 +404,14 @@ export const TAREAS_CRITICAS = [
     pasos: [
       { num: 1, titulo: "Aptitud Operador", desc: "Comprobar habilitación/registro del gruista y verificación técnica vigente del equipo." },
       { num: 2, titulo: "Estabilizadores", desc: "Extender al 100% las patas estabilizadoras sobre tacos de madera en suelo consolidado." },
-      { num: 3, titulo: "Zona de Exclusión", desc: "Delimitar perímetro de giro; prohibición terminante de permanecer bajo la carga suspendida." },
+      { num: 3, titulo: "Zona de Exclusión", desc: "Delimitar el perímetro de giro con vallas o cinta de peligro; prohibición terminante de permanecer bajo la carga suspendida." },
       { num: 4, titulo: "Señalero Designado", desc: "Únicamente el señalero designado se comunicará con el operador de la grúa." }
     ],
     checklist: [
       "Inspección de eslingas y grilletes (sin cortes, deformaciones ni quemaduras)",
       "Pestillo de seguridad del gancho en perfecto estado de funcionamiento",
       "Estabilizadores de grúa extendidos con apoyos sobre suelo firme",
-      "Perímetro de maniobra delimitado y despejado de personal no autorizado",
+      "Perímetro de maniobra delimitado con vallas o cinta de peligro y despejado de personal no autorizado",
       "Cables o cuerdas guías (vientos) atados a la carga para orientarla a distancia",
       "Señalero de maniobras identificado con chaleco de alta visibilidad reglamentario"
     ]
