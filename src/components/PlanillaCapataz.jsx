@@ -71,11 +71,11 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
       <div>
         <div className="flex items-center justify-between mb-3 border-b border-slate-100 pb-3">
           <div>
-            <span className="text-[11px] font-extrabold text-amber-600 uppercase tracking-wider">
+            <span className="text-[11px] font-extrabold text-slate-500 uppercase tracking-wider">
               Habilitación y Responsabilidad
             </span>
             <h3 className="text-lg md:text-xl font-black text-slate-900 flex items-center gap-2">
-              <FileCheck className="w-5 h-5 text-amber-600" />
+              <FileCheck className="w-5 h-5 text-slate-500" />
               <span>Planilla Capataz / M.M.O.</span>
             </h3>
           </div>
@@ -139,7 +139,7 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
                 value={formData.obra}
                 onChange={handleChange}
                 placeholder="Ej: Edificio Central - Frente Andamios Norte"
-                className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
               />
             </div>
 
@@ -153,7 +153,7 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
                   value={formData.responsable}
                   onChange={handleChange}
                   placeholder="Nombre y Apellido"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -165,7 +165,7 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
                   value={formData.matricula}
                   onChange={handleChange}
                   placeholder="DNI o N° Matrícula"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
               </div>
             </div>
@@ -182,7 +182,7 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
                   value={formData.operarios}
                   onChange={handleChange}
                   placeholder="Cantidad de personas"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -194,7 +194,7 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
                   value={formData.horario}
                   onChange={handleChange}
                   placeholder="Ej: 08:00 a 17:00"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
               </div>
             </div>
@@ -210,7 +210,7 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
                   required
                   checked={formData.declaracion}
                   onChange={handleChange}
-                  className="mt-0.5 w-4 h-4 rounded text-amber-600 focus:ring-amber-500"
+                  className="mt-0.5 w-4 h-4 rounded text-slate-500 focus:ring-slate-500"
                 />
                 <span className="text-[11px] text-slate-600 leading-tight select-none">
                   Declaro bajo juramento haber verificado los EPP certificados, el entorno de trabajo y notificado el procedimiento a la cuadrilla.
@@ -223,7 +223,7 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
                 type="submit"
                 className={`w-full py-3.5 px-4 rounded-xl font-black text-sm uppercase tracking-wide flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer ${
                   checklistCompleto 
-                    ? 'bg-amber-500 hover:bg-amber-600 text-slate-950 active:scale-98' 
+                    ? 'bg-slate-900 hover:bg-slate-800 text-white active:scale-98' 
                     : 'bg-slate-200 text-slate-400 cursor-not-allowed'
                 }`}
               >

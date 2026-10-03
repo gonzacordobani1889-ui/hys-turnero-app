@@ -27,7 +27,7 @@ export default function TurneroCard({ tarea, onSelect }) {
   return (
     <button
       onClick={() => onSelect(tarea)}
-      className={`${tarea.colorBg} ${oscuro ? 'text-white' : 'text-gray-900'} text-left p-6 md:p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-150 transform active:scale-95 flex flex-col justify-between h-52 md:h-60 border-2 ${oscuro ? 'border-white/20' : 'border-black/10'} w-full group cursor-pointer focus:outline-none focus:ring-4 focus:ring-amber-400`}
+      className={`${tarea.colorBg} ${oscuro ? 'text-white' : 'text-gray-900'} text-left p-6 md:p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-150 transform active:scale-95 flex flex-col justify-between h-52 md:h-60 border-2 ${oscuro ? 'border-white/20' : 'border-black/10'} w-full group cursor-pointer focus:outline-none focus:ring-4 focus:ring-slate-400`}
     >
       <div className="flex items-start justify-between w-full">
         <div className={`p-3 rounded-2xl backdrop-blur-xs group-hover:scale-110 transition-transform ${oscuro ? 'bg-black/25' : 'bg-white/30'}`}>

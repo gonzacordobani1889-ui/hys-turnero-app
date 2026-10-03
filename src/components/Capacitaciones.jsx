@@ -98,7 +98,7 @@ export default function Capacitaciones({ onBack }) {
 
       <div className="bg-white rounded-2xl shadow-xs border border-slate-200 p-5 md:p-6">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-slate-800 text-amber-400 rounded-xl">
+          <div className="p-2.5 bg-slate-800 text-slate-300 rounded-xl">
             <GraduationCap className="w-6 h-6" />
           </div>
           <div>
@@ -154,7 +154,7 @@ export default function Capacitaciones({ onBack }) {
                     onClick={() => seleccionar(c.id)}
                     className={`p-4 rounded-xl border-2 text-left transition cursor-pointer ${
                       activa
-                        ? 'border-amber-500 bg-amber-50 shadow-md'
+                        ? 'border-slate-500 bg-slate-50 shadow-md'
                         : 'border-slate-200 bg-white hover:border-slate-300'
                     }`}
                   >
@@ -184,13 +184,13 @@ export default function Capacitaciones({ onBack }) {
               </p>
               <div className="bg-slate-50 rounded-xl p-4">
                 <div className="flex items-center gap-2 text-slate-700 font-bold text-xs uppercase tracking-wide mb-2">
-                  <BookOpen className="w-4 h-4 text-amber-600" />
+                  <BookOpen className="w-4 h-4 text-slate-500" />
                   <span>Contenidos</span>
                 </div>
                 <ul className="space-y-1.5">
                   {capacitacion.contenidos.map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-xs text-slate-600 leading-snug">
-                      <span className="mt-1.5 w-1 h-1 rounded-full bg-amber-500 shrink-0" />
+                      <span className="mt-1.5 w-1 h-1 rounded-full bg-slate-500 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -220,7 +220,7 @@ export default function Capacitaciones({ onBack }) {
                       value={instructor}
                       onChange={(e) => setInstructor(e.target.value)}
                       placeholder="Nombre y apellido"
-                      className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                      className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -230,7 +230,7 @@ export default function Capacitaciones({ onBack }) {
                       value={empresa}
                       onChange={(e) => setEmpresa(e.target.value)}
                       placeholder="Razón social o frente"
-                      className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                      className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export default function Capacitaciones({ onBack }) {
                   </h3>
                   <button
                     onClick={agregarParticipante}
-                    className="flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-900 bg-amber-100 px-3 py-2 rounded-lg cursor-pointer"
+                    className="flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-slate-900 bg-slate-100 px-3 py-2 rounded-lg cursor-pointer"
                   >
                     <Plus className="w-4 h-4" />
                     <span>Agregar asistente</span>
@@ -257,14 +257,14 @@ export default function Capacitaciones({ onBack }) {
                       value={p.nombre}
                       onChange={(e) => actualizarParticipante(i, 'nombre', e.target.value)}
                       placeholder={`Asistente ${i + 1} — nombre y apellido`}
-                      className="flex-1 border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                      className="flex-1 border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                     />
                     <input
                       type="text"
                       value={p.dni}
                       onChange={(e) => actualizarParticipante(i, 'dni', e.target.value)}
                       placeholder="DNI"
-                      className="sm:w-32 border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                      className="sm:w-32 border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                     />
                     {participantes.length > 1 && (
                       <button
@@ -285,7 +285,7 @@ export default function Capacitaciones({ onBack }) {
 
                 <button
                   onClick={handleGenerar}
-                  className="w-full py-3.5 px-4 rounded-xl font-black text-sm uppercase tracking-wide flex items-center justify-center gap-2 shadow-md bg-amber-500 hover:bg-amber-600 text-slate-950 active:scale-98 transition-all cursor-pointer"
+                  className="w-full py-3.5 px-4 rounded-xl font-black text-sm uppercase tracking-wide flex items-center justify-center gap-2 shadow-md bg-slate-900 hover:bg-slate-800 text-white active:scale-98 transition-all cursor-pointer"
                 >
                   <FileDown className="w-4 h-4" />
                   <span>Validar y Emitir Constancia (PDF)</span>

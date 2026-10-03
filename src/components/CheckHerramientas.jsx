@@ -135,7 +135,7 @@ export default function CheckHerramientas({ onBack }) {
       {/* Encabezado */}
       <div className="bg-white rounded-2xl shadow-xs border border-slate-200 p-5 md:p-6">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-slate-800 text-amber-400 rounded-xl">
+          <div className="p-2.5 bg-slate-800 text-slate-300 rounded-xl">
             <Wrench className="w-6 h-6" />
           </div>
           <div>
@@ -188,11 +188,11 @@ export default function CheckHerramientas({ onBack }) {
                     onClick={() => seleccionarHerramienta(h.id)}
                     className={`p-3 rounded-xl border-2 text-left flex flex-col items-center gap-2 transition cursor-pointer ${
                       activa
-                        ? 'border-amber-500 bg-amber-50 shadow-md'
+                        ? 'border-slate-500 bg-slate-50 shadow-md'
                         : 'border-slate-200 bg-white hover:border-slate-300'
                     }`}
                   >
-                    <Icono className={`w-6 h-6 ${activa ? 'text-amber-600' : 'text-slate-500'}`} />
+                    <Icono className={`w-6 h-6 ${activa ? 'text-slate-700' : 'text-slate-500'}`} />
                     <span className="text-[11px] font-bold text-slate-700 leading-tight text-center">
                       {h.nombre}
                     </span>
@@ -270,7 +270,7 @@ export default function CheckHerramientas({ onBack }) {
                     value={obra}
                     onChange={(e) => setObra(e.target.value)}
                     placeholder="Ej: Edificio Central - Sector Norte"
-                    className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                    className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                   />
                 </div>
                 <div>
@@ -280,7 +280,7 @@ export default function CheckHerramientas({ onBack }) {
                     value={responsable}
                     onChange={(e) => setResponsable(e.target.value)}
                     placeholder="Nombre y apellido"
-                    className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                    className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                   />
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function CheckHerramientas({ onBack }) {
                   onChange={(e) => setObservaciones(e.target.value)}
                   rows={3}
                   placeholder="Detalle de no conformidades, acciones correctivas u observaciones…"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none resize-y"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none resize-y"
                 />
               </div>
 
@@ -301,7 +301,7 @@ export default function CheckHerramientas({ onBack }) {
                   onClick={handleGenerar}
                   className={`flex-1 py-3.5 px-4 rounded-xl font-black text-sm uppercase tracking-wide flex items-center justify-center gap-2 shadow-md transition-all cursor-pointer ${
                     todosEvaluados
-                      ? 'bg-amber-500 hover:bg-amber-600 text-slate-950 active:scale-98'
+                      ? 'bg-slate-900 hover:bg-slate-800 text-white active:scale-98'
                       : 'bg-slate-200 text-slate-400 cursor-not-allowed'
                   }`}
                 >

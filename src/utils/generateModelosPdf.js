@@ -18,7 +18,7 @@ export function generarCheckHerramientasPDF({ herramienta, resultados, obra, res
   // 1. Encabezado
   doc.setFillColor(30, 41, 59);
   doc.rect(0, 0, 210, 24, 'F');
-  doc.setTextColor(245, 158, 11);
+  doc.setTextColor(203, 213, 225);
   doc.setFontSize(15);
   doc.setFont('helvetica', 'bold');
   doc.text('CHECK PRE-USO DE HERRAMIENTA / EQUIPO', 14, 10);
@@ -134,7 +134,7 @@ export function generarATSPDF({ obra, tarea, responsable, filas, signatureDataUr
 
   doc.setFillColor(30, 41, 59);
   doc.rect(0, 0, 210, 24, 'F');
-  doc.setTextColor(245, 158, 11);
+  doc.setTextColor(203, 213, 225);
   doc.setFontSize(15);
   doc.setFont('helvetica', 'bold');
   doc.text('ANÁLISIS DE TRABAJO SEGURO (ATS)', 14, 10);
@@ -161,7 +161,7 @@ export function generarATSPDF({ obra, tarea, responsable, filas, signatureDataUr
   autoTable(doc, {
     startY: 43,
     theme: 'grid',
-    headStyles: { fillColor: [245, 158, 11], textColor: [15, 23, 42], fontSize: 8, fontStyle: 'bold' },
+    headStyles: { fillColor: [51, 65, 85], textColor: [255, 255, 255], fontSize: 8, fontStyle: 'bold' },
     styles: { fontSize: 7.5, cellPadding: 2, valign: 'top' },
     columnStyles: {
       0: { cellWidth: 10, halign: 'center' },
@@ -207,7 +207,7 @@ export function generarAPRPDF({ obra, actividad, responsable, filas, signatureDa
 
   doc.setFillColor(30, 41, 59);
   doc.rect(0, 0, 210, 24, 'F');
-  doc.setTextColor(245, 158, 11);
+  doc.setTextColor(203, 213, 225);
   doc.setFontSize(15);
   doc.setFont('helvetica', 'bold');
   doc.text('ANÁLISIS DE RIESGOS (APR)', 14, 10);
@@ -299,7 +299,7 @@ export function generarCapacitacionPDF({ capacitacion, instructor, empresa, part
   // 1. Encabezado
   doc.setFillColor(30, 41, 59);
   doc.rect(0, 0, 210, 24, 'F');
-  doc.setTextColor(245, 158, 11);
+  doc.setTextColor(203, 213, 225);
   doc.setFontSize(15);
   doc.setFont('helvetica', 'bold');
   doc.text('CONSTANCIA DE CAPACITACIÓN', 14, 10);

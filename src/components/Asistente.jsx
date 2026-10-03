@@ -20,7 +20,7 @@ function Opcion({ icono, texto, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="w-full text-left bg-white border border-slate-200 hover:border-amber-400 rounded-xl p-3 flex items-center gap-2.5 cursor-pointer transition-colors"
+      className="w-full text-left bg-white border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex items-center gap-2.5 cursor-pointer transition-colors"
     >
       <span className="text-slate-600">{icono}</span>
       <span className="flex-1 text-xs font-bold text-slate-800">{texto}</span>
@@ -59,7 +59,7 @@ export default function Asistente({ onAbrirTarea, onAbrirModelo, onBuscar }) {
       {!abierto && (
         <button
           onClick={() => setAbierto(true)}
-          className="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-slate-900 text-amber-400 shadow-xl border-2 border-amber-500 flex items-center justify-center hover:scale-105 transition cursor-pointer"
+          className="fixed bottom-5 right-5 z-40 w-14 h-14 rounded-full bg-slate-900 text-slate-200 shadow-xl border-2 border-slate-600 flex items-center justify-center hover:scale-105 transition cursor-pointer"
           aria-label="Abrir asistente de campo"
           title="Asistente de Campo"
         >
@@ -70,8 +70,8 @@ export default function Asistente({ onAbrirTarea, onAbrirModelo, onBuscar }) {
       {/* Panel del asistente */}
       {abierto && (
         <div className="fixed bottom-5 right-5 z-50 w-[calc(100vw-2.5rem)] max-w-sm bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[80vh]">
-          <div className="bg-slate-900 text-white p-4 flex items-center gap-3 border-b-4 border-amber-500 shrink-0">
-            <div className="p-2 bg-amber-500 text-slate-950 rounded-xl">
+          <div className="bg-slate-900 text-white p-4 flex items-center gap-3 border-b-4 border-slate-700 shrink-0">
+            <div className="p-2 bg-slate-700 text-white rounded-xl">
               <Bot className="w-5 h-5" />
             </div>
             <div className="flex-1">
@@ -115,7 +115,7 @@ export default function Asistente({ onAbrirTarea, onAbrirModelo, onBuscar }) {
                   <button
                     key={t.id}
                     onClick={() => abrirTarea(t)}
-                    className="w-full text-left bg-white border border-slate-200 hover:border-amber-400 rounded-xl p-3 flex items-center gap-2.5 cursor-pointer transition-colors"
+                    className="w-full text-left bg-white border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex items-center gap-2.5 cursor-pointer transition-colors"
                   >
                     <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${t.colorBg.split(' ')[0]}`} />
                     <span className="flex-1 text-xs font-bold text-slate-800">{t.titulo}</span>
@@ -134,7 +134,7 @@ export default function Asistente({ onAbrirTarea, onAbrirModelo, onBuscar }) {
                   <button
                     key={m.id}
                     onClick={() => abrirModelo(m.id)}
-                    className="w-full text-left bg-white border border-slate-200 hover:border-amber-400 rounded-xl p-3 flex items-center gap-2.5 cursor-pointer transition-colors"
+                    className="w-full text-left bg-white border border-slate-200 hover:border-slate-300 rounded-xl p-3 flex items-center gap-2.5 cursor-pointer transition-colors"
                   >
                     <ClipboardList className="w-4 h-4 text-slate-500" />
                     <span className="flex-1 text-xs font-bold text-slate-800">{m.titulo}</span>
@@ -153,7 +153,7 @@ export default function Asistente({ onAbrirTarea, onAbrirModelo, onBuscar }) {
                   <button
                     key={t}
                     onClick={() => buscar(t)}
-                    className="w-full text-left bg-white border border-slate-200 hover:border-amber-400 rounded-xl px-3 py-2.5 text-xs font-bold text-slate-800 cursor-pointer transition-colors"
+                    className="w-full text-left bg-white border border-slate-200 hover:border-slate-300 rounded-xl px-3 py-2.5 text-xs font-bold text-slate-800 cursor-pointer transition-colors"
                   >
                     {t}
                   </button>

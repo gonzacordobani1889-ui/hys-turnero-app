@@ -79,7 +79,7 @@ export default function ATSForm({ onBack }) {
 
       <div className="bg-white rounded-2xl shadow-xs border border-slate-200 p-5 md:p-6">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-slate-800 text-amber-400 rounded-xl">
+          <div className="p-2.5 bg-slate-800 text-slate-300 rounded-xl">
             <ClipboardList className="w-6 h-6" />
           </div>
           <div>
@@ -137,7 +137,7 @@ export default function ATSForm({ onBack }) {
                   value={tarea}
                   onChange={(e) => setTarea(e.target.value)}
                   placeholder="Ej: Montaje de andamio en fachada norte"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -147,7 +147,7 @@ export default function ATSForm({ onBack }) {
                   value={obra}
                   onChange={(e) => setObra(e.target.value)}
                   placeholder="Ej: Edificio Central"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -157,7 +157,7 @@ export default function ATSForm({ onBack }) {
                   value={responsable}
                   onChange={(e) => setResponsable(e.target.value)}
                   placeholder="Nombre y apellido"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function ATSForm({ onBack }) {
               </h3>
               <button
                 onClick={agregarFila}
-                className="flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-900 bg-amber-100 px-3 py-2 rounded-lg cursor-pointer"
+                className="flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-slate-900 bg-slate-100 px-3 py-2 rounded-lg cursor-pointer"
               >
                 <Plus className="w-4 h-4" />
                 <span>Agregar paso</span>
@@ -197,21 +197,21 @@ export default function ATSForm({ onBack }) {
                   value={fila.paso}
                   onChange={(e) => actualizarFila(i, 'paso', e.target.value)}
                   placeholder="Paso de la tarea (qué se hace)"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
                 <input
                   type="text"
                   value={fila.peligros}
                   onChange={(e) => actualizarFila(i, 'peligros', e.target.value)}
                   placeholder="Peligro asociado a este paso"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
                 <input
                   type="text"
                   value={fila.controles}
                   onChange={(e) => actualizarFila(i, 'controles', e.target.value)}
                   placeholder="Medidas de control (eliminar, sustituir, ingeniería, administrativas, EPP)"
-                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-full border border-slate-300 rounded-xl p-2.5 text-sm text-slate-900 focus:ring-2 focus:ring-slate-500 focus:outline-none"
                 />
               </div>
             ))}
@@ -223,7 +223,7 @@ export default function ATSForm({ onBack }) {
 
             <button
               onClick={handleGenerar}
-              className="w-full py-3.5 px-4 rounded-xl font-black text-sm uppercase tracking-wide flex items-center justify-center gap-2 shadow-md bg-amber-500 hover:bg-amber-600 text-slate-950 active:scale-98 transition-all cursor-pointer"
+              className="w-full py-3.5 px-4 rounded-xl font-black text-sm uppercase tracking-wide flex items-center justify-center gap-2 shadow-md bg-slate-900 hover:bg-slate-800 text-white active:scale-98 transition-all cursor-pointer"
             >
               <FileDown className="w-4 h-4" />
               <span>Validar y Emitir ATS (PDF)</span>

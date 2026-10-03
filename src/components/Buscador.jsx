@@ -17,7 +17,7 @@ export default function Buscador({ busqueda, onChange, resultados, onSelect }) {
           onChange={(e) => onChange(e.target.value)}
           placeholder="Buscar tarea, normativa, resolución o ítem del checklist…"
           autoComplete="off"
-          className="w-full pl-12 pr-12 py-4 rounded-2xl border-2 border-slate-300 bg-white text-slate-900 text-base md:text-lg shadow-xs focus:border-amber-500 focus:ring-4 focus:ring-amber-200 focus:outline-none"
+          className="w-full pl-12 pr-12 py-4 rounded-2xl border-2 border-slate-300 bg-white text-slate-900 text-base md:text-lg shadow-xs focus:border-slate-500 focus:ring-4 focus:ring-slate-200 focus:outline-none"
         />
         {hayBusqueda && (
           <button
@@ -54,13 +54,13 @@ export default function Buscador({ busqueda, onChange, resultados, onSelect }) {
                 key={tarea.id}
                 type="button"
                 onClick={() => onSelect(tarea)}
-                className="w-full bg-white rounded-2xl border border-slate-200 p-4 text-left hover:border-amber-400 hover:shadow-md transition-all cursor-pointer group"
+                className="w-full bg-white rounded-2xl border border-slate-200 p-4 text-left hover:border-slate-300 hover:shadow-md transition-all cursor-pointer group"
               >
                 <div className="flex items-center justify-between gap-3">
                   <span className={`text-xs font-black px-2.5 py-1 rounded-lg ${tarea.colorBadge}`}>
                     {tarea.titulo}
                   </span>
-                  <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-amber-500 group-hover:translate-x-0.5 transition shrink-0" />
+                  <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-slate-600 group-hover:translate-x-0.5 transition shrink-0" />
                 </div>
 
                 <div className="mt-2.5 space-y-1.5">
@@ -73,7 +73,7 @@ export default function Buscador({ busqueda, onChange, resultados, onSelect }) {
                     </p>
                   ))}
                   {coincidencias.length > 3 && (
-                    <p className="text-[11px] text-amber-600 font-bold">
+                    <p className="text-[11px] text-slate-600 font-bold">
                       + {coincidencias.length - 3} coincidencias más — toque para abrir
                     </p>
                   )}

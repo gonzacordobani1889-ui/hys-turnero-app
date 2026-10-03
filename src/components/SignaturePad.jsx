@@ -76,7 +76,7 @@ export default function SignaturePad({ onSignatureChange }) {
     <div className="space-y-1.5">
       <div className="flex items-center justify-between">
         <label className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-          <PenTool className="w-3.5 h-3.5 text-amber-600" />
+          <PenTool className="w-3.5 h-3.5 text-slate-500" />
           <span>Firma Táctil del Capataz / M.M.O. (Firme con el dedo aquí):</span>
         </label>
         {hasSignature && (
@@ -91,7 +91,7 @@ export default function SignaturePad({ onSignatureChange }) {
         )}
       </div>
 
-      <div className="relative border-2 border-dashed border-slate-300 rounded-xl bg-slate-50 overflow-hidden touch-none hover:border-amber-400 transition-colors">
+      <div className="relative border-2 border-dashed border-slate-300 rounded-xl bg-slate-50 overflow-hidden touch-none hover:border-slate-300 transition-colors">
         <canvas
           ref={canvasRef}
           width={380}

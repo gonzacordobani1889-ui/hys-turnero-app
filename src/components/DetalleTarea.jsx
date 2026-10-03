@@ -19,7 +19,7 @@ import IlustracionTarea from './IlustracionTarea';
 // Categorías de la guía técnica operativa (contenido expandido por tarea)
 const SECCIONES_OPERATIVA = [
   { key: 'queHacer', titulo: 'Qué se debe hacer', icono: ClipboardList, acento: 'text-sky-400', punto: 'bg-sky-400' },
-  { key: 'metodosTrabajo', titulo: 'Métodos de trabajo', icono: Wrench, acento: 'text-amber-400', punto: 'bg-amber-400' },
+  { key: 'metodosTrabajo', titulo: 'Métodos de trabajo', icono: Wrench, acento: 'text-violet-400', punto: 'bg-violet-400' },
   { key: 'tiposInforme', titulo: 'Tipos de informe y planilla', icono: FileText, acento: 'text-emerald-400', punto: 'bg-emerald-400' },
   { key: 'prevencion', titulo: 'Métodos de prevención', icono: ShieldCheck, acento: 'text-rose-400', punto: 'bg-rose-400' }
 ];
@@ -54,16 +54,16 @@ export default function DetalleTarea({ tarea, onBack }) {
       </button>
 
       {/* SECCIÓN SUPERIOR: RESOLUCIONES, GUÍA TÉCNICA Y PROCEDIMIENTO */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white rounded-2xl shadow-lg border-2 border-amber-500 overflow-hidden">
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white rounded-2xl shadow-lg border-2 border-slate-700 overflow-hidden">
 
         {/* Cabecera de la tarea */}
-        <div className="bg-amber-500 text-slate-950 p-4 md:p-5 flex flex-wrap items-center justify-between gap-3">
+        <div className="bg-slate-900 text-white p-4 md:p-5 flex flex-wrap items-center justify-between gap-3 border-b-2 border-slate-700">
           <div className="flex items-center gap-3">
-            <div className="bg-slate-950 rounded-xl p-1.5 shrink-0">
-              <IlustracionTarea id={tarea.id} className="w-14 h-14 md:w-16 md:h-16 text-amber-400" />
+            <div className="bg-slate-800 rounded-xl p-1.5 shrink-0">
+              <IlustracionTarea id={tarea.id} className="w-14 h-14 md:w-16 md:h-16 text-slate-200" />
             </div>
             <div>
-              <div className="text-[11px] uppercase font-black tracking-widest text-slate-900/80">
+              <div className="text-[11px] uppercase font-black tracking-widest text-slate-400">
                 Guía Operativa &middot; Protocolo de Prevención
               </div>
               <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
@@ -71,7 +71,7 @@ export default function DetalleTarea({ tarea, onBack }) {
               </h2>
             </div>
           </div>
-          <span className="bg-slate-950 text-amber-400 text-xs font-black px-3.5 py-1.5 rounded-lg uppercase tracking-wider">
+          <span className="bg-slate-700 text-white text-xs font-black px-3.5 py-1.5 rounded-lg uppercase tracking-wider">
             Riesgo Crítico Reglamentado
           </span>
         </div>
@@ -79,8 +79,8 @@ export default function DetalleTarea({ tarea, onBack }) {
         <div className="p-5 md:p-6 space-y-6">
 
           {/* RESOLUCIONES DESPLEGABLES (ACORDEÓN) */}
-          <div className="bg-slate-800/90 rounded-xl p-4 md:p-5 border border-amber-500/40 space-y-2">
-            <div className="flex items-center gap-2 text-amber-400 font-black text-sm uppercase tracking-wide">
+          <div className="bg-slate-800/90 rounded-xl p-4 md:p-5 border border-slate-700 space-y-2">
+            <div className="flex items-center gap-2 text-slate-300 font-black text-sm uppercase tracking-wide">
               <Scale className="w-4 h-4" />
               <span>Marco Legal &amp; Resoluciones Oficiales Aplicables</span>
             </div>
@@ -92,20 +92,20 @@ export default function DetalleTarea({ tarea, onBack }) {
               {tarea.resoluciones.map((res, i) => {
                 const abierta = resolucionAbierta === i;
                 return (
-                  <div key={i} className="border border-slate-700/70 rounded-lg overflow-hidden bg-slate-900/50">
+                  <div key={i} className="border border-slate-700 rounded-lg overflow-hidden bg-slate-900/50">
                     <button
                       onClick={() => setResolucionAbierta(abierta ? null : i)}
                       className="w-full flex items-center justify-between gap-3 text-left p-3 hover:bg-slate-800 transition-colors cursor-pointer"
                     >
-                      <span className="font-black text-amber-300 uppercase tracking-wide text-xs leading-snug">
+                      <span className="font-black text-slate-100 uppercase tracking-wide text-xs leading-snug">
                         {res.norma}
                       </span>
-                      <ChevronDown className={`w-4 h-4 text-amber-400 shrink-0 transition-transform ${abierta ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 text-slate-400 shrink-0 transition-transform ${abierta ? 'rotate-180' : ''}`} />
                     </button>
                     {abierta && (
-                      <div className="px-3 pb-3 pt-1 border-t border-slate-700/60 text-xs">
+                      <div className="px-3 pb-3 pt-1 border-t border-slate-700 text-xs">
                         <p className="text-slate-200 leading-snug">{res.desc}</p>
-                        <p className="text-slate-400 leading-relaxed mt-1.5 border-l-2 border-amber-400/60 pl-2.5">
+                        <p className="text-slate-400 leading-relaxed mt-1.5 border-l-2 border-slate-600 pl-2.5">
                           {res.detalle}
                         </p>
                       </div>
@@ -119,7 +119,7 @@ export default function DetalleTarea({ tarea, onBack }) {
           {/* GUÍA TÉCNICA: QUÉ HACER / MÉTODOS / INFORMES / PREVENCIÓN */}
           <div>
             <div className="flex items-center gap-2 text-white font-black text-sm uppercase tracking-wide mb-3">
-              <BookOpen className="w-4 h-4 text-amber-400" />
+              <BookOpen className="w-4 h-4 text-slate-300" />
               <span>Guía Técnica de la Tarea</span>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -127,7 +127,7 @@ export default function DetalleTarea({ tarea, onBack }) {
                 const Icono = seccion.icono;
                 const items = tarea.operativa?.[seccion.key] || [];
                 return (
-                  <div key={seccion.key} className="bg-slate-800/70 p-4 rounded-xl border border-slate-700/70">
+                  <div key={seccion.key} className="bg-slate-800/70 p-4 rounded-xl border border-slate-700">
                     <div className="flex items-center gap-2 mb-2.5">
                       <Icono className={`w-4 h-4 ${seccion.acento}`} />
                       <span className="font-bold text-white text-xs uppercase tracking-wide">{seccion.titulo}</span>
@@ -149,13 +149,13 @@ export default function DetalleTarea({ tarea, onBack }) {
           {/* CÓMO TIENE QUE ACTUAR EL TÉCNICO / PASOS OPERATIVOS */}
           <div>
             <div className="flex items-center gap-2 text-white font-black text-sm uppercase tracking-wide mb-3">
-              <ListOrdered className="w-4 h-4 text-amber-400" />
+              <ListOrdered className="w-4 h-4 text-slate-300" />
               <span>Protocolo de Actuación en Campo (Pasos Obligatorios)</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
               {tarea.pasos.map((paso) => (
-                <div key={paso.num} className="bg-slate-800/70 p-3.5 rounded-xl border border-slate-700/80">
-                  <div className="w-6 h-6 rounded-full bg-amber-500 text-slate-950 font-black text-xs flex items-center justify-center mb-2 shadow-xs">
+                <div key={paso.num} className="bg-slate-800/70 p-3.5 rounded-xl border border-slate-700">
+                  <div className="w-6 h-6 rounded-full bg-slate-500 text-white font-black text-xs flex items-center justify-center mb-2 shadow-xs">
                     {paso.num}
                   </div>
                   <div className="font-bold text-white text-xs uppercase mb-1">{paso.titulo}</div>

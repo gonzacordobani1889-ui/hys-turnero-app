@@ -83,7 +83,7 @@ export default function App() {
             {!hayBusqueda && (
               <>
                 <div className="bg-white p-5 md:p-6 rounded-2xl shadow-xs border border-slate-200 text-center">
-                  <span className="inline-block px-3 py-1 bg-amber-100 text-amber-900 text-xs font-black rounded-full mb-2 uppercase tracking-wider">
+                  <span className="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-xs font-black rounded-full mb-2 uppercase tracking-wider">
                     Paso 1: Seleccione la Tarea de Riesgo
                   </span>
                   <h2 className="text-2xl md:text-3xl font-black text-slate-900">

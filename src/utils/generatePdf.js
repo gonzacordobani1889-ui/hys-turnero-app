@@ -16,7 +16,7 @@ export function generarPermisoPDF({ tarea, datosObra, checklistItems, signatureD
   doc.setFillColor(30, 41, 59); // slate-800
   doc.rect(0, 0, 210, 24, 'F');
 
-  doc.setTextColor(245, 158, 11); // amber-500
+  doc.setTextColor(203, 213, 225); // slate-300
   doc.setFontSize(16);
   doc.setFont('helvetica', 'bold');
   doc.text('PERMISO DE TRABAJO SEGURO (PTS)', 14, 11);
