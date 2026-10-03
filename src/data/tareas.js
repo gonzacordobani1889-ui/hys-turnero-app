@@ -17,15 +17,15 @@ export const TAREAS_CRITICAS = [
       { norma: "Ley Nacional 19.587", desc: "Marco regulatorio general de Higiene y Seguridad en el Trabajo." }
     ],
     pasos: [
-      { num: 1, titulo: "Inspección Previa", desc: "Verificar andamios nivelados, tablones amarrados y ausencia de vientos superiores a 40 km/h." },
+      { num: 1, titulo: "Inspección Previa", desc: "Verificar andamios nivelados, tablones amarrados y que la velocidad del viento no supere los 40 km/h." },
       { num: 2, titulo: "Punto de Anclaje", desc: "Fijar cabo a línea de vida independiente certificada o estructura resistente comprobada." },
-      { num: 3, titulo: "Revisión EPP", desc: "Inspeccionar costuras del arnés, mosquetones con doble traba y casco con barbijito colocado." },
+      { num: 3, titulo: "Revisión EPP", desc: "Inspeccionar las costuras del arnés, los mosquetones con doble traba y el casco con barbiquejo ajustado." },
       { num: 4, titulo: "Permiso Firmado", desc: "El Capataz o Maestro Mayor de Obra debe suscribir el PTS antes del ascenso." }
     ],
     checklist: [
       "Arnés de seguridad de cuerpo completo certificado (IRAM 3622)",
       "Cabo de vida doble en 'Y' con amortiguador de impacto",
-      "Casco de seguridad con barbijito de 3 puntos fijado a la barbilla",
+      "Casco de seguridad con barbiquejo de tres puntos ajustado a la barbilla",
       "Línea de vida independiente fijada a estructura resistente (> 22 kN)",
       "Andamio con barandas reglamentarias (1m y 0.50m) y zócalos de 15 cm",
       "Tablones metálicos o de madera sana trabados y amarrados",
@@ -58,7 +58,7 @@ export const TAREAS_CRITICAS = [
       "Escaleras de ingreso y egreso rápido ubicadas a no más de 7.5m",
       "Vallas físicas rígidas en el perímetro para evitar caídas de terceros",
       "Inspección de grietas o taludes tras lluvias o vibraciones de maquinaria",
-      "Uso obligatorio de casco, botas de seguridad y chaleco reflectivo"
+      "Uso obligatorio de casco, botas de seguridad y chaleco de alta visibilidad"
     ]
   },
   {
@@ -74,13 +74,13 @@ export const TAREAS_CRITICAS = [
       { norma: "Res. SRT 3068/14", desc: "Reglamento para la ejecución de trabajos con tensión en baja tensión." }
     ],
     pasos: [
-      { num: 1, titulo: "5 Reglas de Oro", desc: "Corte visible, bloqueo (LOTO), verificar ausencia de tensión, puesta a tierra en cortocircuito y señalizar." },
+      { num: 1, titulo: "Cinco Reglas de Oro", desc: "Corte visible, bloqueo y etiquetado (LOTO), verificación de ausencia de tensión, puesta a tierra en cortocircuito y señalización de la zona." },
       { num: 2, titulo: "Herramientas 1000V", desc: "Utilizar herramientas de mano aisladas bajo norma IRAM-IEC 60900." },
-      { num: 3, titulo: "Tablero Eléctrico", desc: "Verificar disyuntor de 30 mA y jabalina de tierra con conexionado firme." },
+      { num: 3, titulo: "Tablero Eléctrico", desc: "Verificar el disyuntor diferencial de 30 mA y la jabalina de puesta a tierra con conexionado firme." },
       { num: 4, titulo: "Bloqueo Físico", desc: "Colocar candado de seguridad individual y tarjeta de 'NO OPERAR'." }
     ],
     checklist: [
-      "Aplicación de las 5 Reglas de Oro de seguridad eléctrica",
+      "Aplicación de las cinco reglas de oro de seguridad eléctrica",
       "Bloqueo con candado personal y tarjeta de seguridad (LOTO) en interruptor",
       "Comprobación con multímetro o tester de ausencia de tensión",
       "Guantes dieléctricos ensayados para el nivel de tensión adecuado",
@@ -125,17 +125,17 @@ export const TAREAS_CRITICAS = [
     resoluciones: [
       { norma: "Dec. 911/96 (Arts. 131-137)", desc: "Soldadura y corte: Ventilación, biombos ignífugos y tubos de gas comprimido." },
       { norma: "Dec. 351/79 (Cap. 18)", desc: "Protección contra incendios: Dotación y tipos de extintores." },
-      { norma: "Norma IRAM 3517", desc: "Control, carga y mantenimiento de matafuegos triclase ABC." }
+      { norma: "Norma IRAM 3517", desc: "Control, carga y mantenimiento de matafuegos de polvo químico ABC (triclase)." }
     ],
     pasos: [
       { num: 1, titulo: "Despeje 10 Metros", desc: "Retirar o cubrir con mantas ignífugas cualquier material combustible a 10 metros a la redonda." },
-      { num: 2, titulo: "Extintor al Pie", desc: "Disponer de un matafuegos de polvo químico ABC de 5kg o 10kg cargado y vigente al lado." },
-      { num: 3, titulo: "EPP Específico", desc: "Máscara de soldar, guantes largos de descarne, delantal y polainas de cuero." },
+      { num: 2, titulo: "Matafuegos en el Punto de Trabajo", desc: "Disponer de un matafuegos de polvo químico ABC de 5 kg o 10 kg, cargado y con carga vigente, junto al punto de trabajo." },
+      { num: 3, titulo: "EPP Específico", desc: "Máscara de soldar, guantes de descarne (cuero) de caña larga, delantal y polainas de cuero." },
       { num: 4, titulo: "Guardia Posterior", desc: "Monitorear el área durante 30 minutos tras finalizar los trabajos por posible ignición lenta." }
     ],
     checklist: [
       "Radio de 10 metros libre de materiales combustibles o inflamables",
-      "Extintor ABC cargado, presurizado y con tarjeta de control vigente al pie de la tarea",
+      "Matafuegos ABC cargado, presurizado y con tarjeta de control vigente junto al punto de trabajo",
       "Mamparas o biombos ignífugos para evitar proyección de chispas a transeúntes",
       "Cilindros de gas comprimido (oxígeno/acetileno) asegurados verticalmente con cadena",
       "Válvulas arrestallamas colocadas en mango del soplete y salida de tubos",
@@ -158,7 +158,7 @@ export const TAREAS_CRITICAS = [
       { num: 1, titulo: "Aptitud Operador", desc: "Comprobar habilitación/registro del gruista y verificación técnica vigente del equipo." },
       { num: 2, titulo: "Estabilizadores", desc: "Extender al 100% las patas estabilizadoras sobre tacos de madera en suelo consolidado." },
       { num: 3, titulo: "Zona de Exclusión", desc: "Delimitar perímetro de giro; prohibición terminante de permanecer bajo la carga suspendida." },
-      { num: 4, titulo: "Rigger Designado", desc: "Solo un señalero designado debe comunicarse con el operador de la grúa." }
+      { num: 4, titulo: "Señalero Designado", desc: "Únicamente el señalero designado se comunicará con el operador de la grúa." }
     ],
     checklist: [
       "Inspección de eslingas y grilletes (sin cortes, deformaciones ni quemaduras)",
@@ -166,7 +166,7 @@ export const TAREAS_CRITICAS = [
       "Estabilizadores de grúa extendidos con apoyos sobre suelo firme",
       "Perímetro de maniobra delimitado y despejado de personal no autorizado",
       "Cables o cuerdas guías (vientos) atados a la carga para orientarla a distancia",
-      "Rigger o señalero identificado con chaleco reflectivo reglamentario"
+      "Señalero de maniobras identificado con chaleco de alta visibilidad reglamentario"
     ]
   }
 ];

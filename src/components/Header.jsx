@@ -25,7 +25,7 @@ export default function Header({ onOpenHistorial }) {
           <div className="flex items-center gap-2">
             <h1 className="text-xl md:text-2xl font-black uppercase tracking-wide">HyS Tótem Operativo</h1>
             <span className="hidden sm:inline-block bg-slate-950 text-amber-300 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase">
-              MVP Campo
+              Versión de Campo
             </span>
           </div>
           <p className="text-xs md:text-sm font-semibold opacity-90 hidden sm:block">

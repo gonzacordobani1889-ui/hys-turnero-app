@@ -81,7 +81,7 @@ export function generarPermisoPDF({ tarea, datosObra, checklistItems, signatureD
     return [
       (index + 1).toString(),
       item,
-      verificado ? 'CUMPLE CONFORME (OK)' : 'NO VERIFICADO'
+      verificado ? 'CUMPLE CONFORME' : 'NO VERIFICADO'
     ];
   });
 

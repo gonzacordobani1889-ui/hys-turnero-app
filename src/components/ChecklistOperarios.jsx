@@ -39,7 +39,7 @@ export default function ChecklistOperarios({ checklist, checkedIndices, onToggle
         </div>
 
         <p className="text-xs text-slate-500 mb-4">
-          Toca cada elemento conforme lo inspeccionas en el lugar. Todos los puntos son <strong>obligatorios</strong> para habilitar el trabajo.
+          Toque cada elemento a medida que lo verifica en el lugar. Todos los puntos son <strong>obligatorios</strong> para habilitar la tarea.
         </p>
 
         {/* Lista de checks táctiles */}

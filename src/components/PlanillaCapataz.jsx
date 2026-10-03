@@ -181,7 +181,7 @@ export default function PlanillaCapataz({ tarea, checklistCompleto, checkedIndic
                   required
                   value={formData.operarios}
                   onChange={handleChange}
-                  placeholder="Cant. personas"
+                  placeholder="Cantidad de personas"
                   className="w-full border border-slate-300 rounded-xl p-2.5 text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none"
                 />
               </div>

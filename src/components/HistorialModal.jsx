@@ -28,14 +28,14 @@ export default function HistorialModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const handleEliminar = (id) => {
-    if (window.confirm('¿Seguro que deseas eliminar este registro del historial local?')) {
+    if (window.confirm('¿Confirma que desea eliminar este registro del historial local?')) {
       const actualizados = eliminarPermisoDeHistorial(id);
       setPermisos(actualizados);
     }
   };
 
   const handleLimpiarTodo = () => {
-    if (window.confirm('¿Estás seguro de que deseas borrar TODOS los permisos del historial local? Esta acción no se puede deshacer.')) {
+    if (window.confirm('¿Confirma que desea eliminar todos los permisos del historial local? Esta acción no se puede deshacer.')) {
       limpiarTodoElHistorial();
       setPermisos([]);
     }
